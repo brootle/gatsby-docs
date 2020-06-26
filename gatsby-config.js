@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/gatsby-docs",
   siteMetadata: {
     title: 'Qencode Documentation',
     description: `Qencode Documentation`,
