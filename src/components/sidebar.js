@@ -171,8 +171,8 @@ export default function Sidebar() {
     // <img src={`/gatsby-docs/images/docs/${item.dir}.svg`} alt={item.dir} />
     // <img src="/images/docs/tutorials.svg" alt="Tutorials" />
 
-    const prefixedURL = getPrefixedPath("/images/docs/tutorials.svg")
-    console.log("prefixedURL: ", prefixedURL)
+    // const prefixedURL = getPrefixedPath("/images/docs/tutorials.svg")
+    // console.log("prefixedURL: ", prefixedURL)
 
     //let menu_items = menu.map( (item, index) => 
     // let menu_items = menu_from_data.map( (item, index) => 
@@ -184,7 +184,7 @@ export default function Sidebar() {
                 activeClassName={sidebarStyles.active}
                 partiallyActive={true}
             >
-                <img src={`/gatsby-docs/images/docs/${item.dir}.svg`} alt={item.dir} />
+                <img src={getPrefixedPath(`/images/docs/${item.dir}.svg`)} alt={item.dir} />
                 <div>{item.name}</div>
             </Link>      
 
