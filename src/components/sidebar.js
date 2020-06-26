@@ -166,6 +166,7 @@ export default function Sidebar() {
     // TODO
     // need to associate top level articles with images
 
+    // <img src={`/images/docs/${item.dir}.svg`} alt={item.dir} />
 
     //let menu_items = menu.map( (item, index) => 
     // let menu_items = menu_from_data.map( (item, index) => 
@@ -177,7 +178,7 @@ export default function Sidebar() {
                 activeClassName={sidebarStyles.active}
                 partiallyActive={true}
             >
-                <img src={`/images/docs/${item.dir}.svg`} alt={item.dir} />
+                <img src="/images/docs/tutorials.svg" alt="Tutorials" />
                 <div>{item.name}</div>
             </Link>      
 
