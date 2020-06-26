@@ -166,7 +166,8 @@ export default function Sidebar() {
     // TODO
     // need to associate top level articles with images
 
-    // <img src={`/images/docs/${item.dir}.svg`} alt={item.dir} />
+    // <img src={`/gatsby-docs/images/docs/${item.dir}.svg`} alt={item.dir} />
+    // <img src="/images/docs/tutorials.svg" alt="Tutorials" />
 
     //let menu_items = menu.map( (item, index) => 
     // let menu_items = menu_from_data.map( (item, index) => 
@@ -178,7 +179,7 @@ export default function Sidebar() {
                 activeClassName={sidebarStyles.active}
                 partiallyActive={true}
             >
-                <img src="/images/docs/tutorials.svg" alt="Tutorials" />
+                <img src={`/gatsby-docs/images/docs/${item.dir}.svg`} alt={item.dir} />
                 <div>{item.name}</div>
             </Link>      
 
