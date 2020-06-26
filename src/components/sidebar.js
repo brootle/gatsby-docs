@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
+import getPrefixedPath from "../getPrefixedPath"
+
 import logo from "../images/logo.svg"
 
 import sidebarStyles from "./sidebar.module.css"
@@ -168,6 +170,9 @@ export default function Sidebar() {
 
     // <img src={`/gatsby-docs/images/docs/${item.dir}.svg`} alt={item.dir} />
     // <img src="/images/docs/tutorials.svg" alt="Tutorials" />
+
+    const prefixedURL = getPrefixedPath("/images/docs/tutorials.svg")
+    console.log("prefixedURL: ", prefixedURL)
 
     //let menu_items = menu.map( (item, index) => 
     // let menu_items = menu_from_data.map( (item, index) => 
