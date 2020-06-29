@@ -1,7 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-
-import getPrefixedPath from "../getPrefixedPath"
+import { useStaticQuery, graphql, Link, withPrefix } from "gatsby"
 
 import logo from "../images/logo.svg"
 
@@ -69,7 +67,7 @@ export default function Sidebar() {
     let urlList = []
 
     let nodes = data.allMarkdownRemark.edges.map( ({ node }) => {
-        console.log(node.fields.slug)
+        // console.log(node.fields.slug)
         urlList.push(node.fields.slug)
         return {
             url: node.fields.slug,
@@ -163,7 +161,7 @@ export default function Sidebar() {
     // BUILDING UI
     // menu is sorted by 'weight' from md file frontmatter by Graphql request
     const menu = menu_from_data
-    console.log("menu", menu);
+    // console.log("menu", menu);
     
     // TODO
     // need to associate top level articles with images
@@ -172,6 +170,9 @@ export default function Sidebar() {
     // <img src="/images/docs/tutorials.svg" alt="Tutorials" />
 
     // const prefixedURL = getPrefixedPath("/images/docs/tutorials.svg")
+    // console.log("prefixedURL: ", prefixedURL)
+
+    // const prefixedURL = withPrefix(`/images/docs/tutorials.svg`)
     // console.log("prefixedURL: ", prefixedURL)
 
     //let menu_items = menu.map( (item, index) => 
@@ -184,7 +185,7 @@ export default function Sidebar() {
                 activeClassName={sidebarStyles.active}
                 partiallyActive={true}
             >
-                <img src={getPrefixedPath(`/images/docs/${item.dir}.svg`)} alt={item.dir} />
+                <img src={withPrefix(`/images/docs/${item.dir}.svg`)} alt={item.dir} />
                 <div>{item.name}</div>
             </Link>      
 
