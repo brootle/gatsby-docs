@@ -9,7 +9,7 @@ export default function Sidebar() {
 
     const data = useStaticQuery(graphql`
         query {
-            allMarkdownRemark (sort: { fields: [frontmatter___weight], order: DESC }) {
+            allMdx (sort: { fields: [frontmatter___weight], order: DESC }) {
                 totalCount
                 edges {
                     node {
@@ -66,7 +66,7 @@ export default function Sidebar() {
 
     let urlList = []
 
-    let nodes = data.allMarkdownRemark.edges.map( ({ node }) => {
+    let nodes = data.allMdx.edges.map( ({ node }) => {
         // console.log(node.fields.slug)
         urlList.push(node.fields.slug)
         return {

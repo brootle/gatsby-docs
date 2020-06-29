@@ -38,6 +38,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,       
-    `gatsby-plugin-lodash`,  
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
   ],
 }

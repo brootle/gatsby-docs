@@ -20,3 +20,5 @@ Had to wrap each reference to a static asset in this function call. For example:
   href={withPrefix('/apple-icon-57x57.png')}
 />
 This solved the issue, assets load properly with the correct paths in both development and production mode.
+
+
