@@ -19,7 +19,7 @@ export default function ApiSummary({ title }) {
                     fields {
                       slug
                     }
-                    excerpt(pruneLength: 180)
+                    excerpt(pruneLength: 210)
                   }
                 }
               }
@@ -39,7 +39,7 @@ export default function ApiSummary({ title }) {
 
     const apiPosts = apiNodes.map( ({ node }) => {
         let dir = node.fields.slug.slice(1, -1).split('/')[1]
-        let excerpt = node.excerpt.slice(0, 40) + '...'
+        let excerpt = node.excerpt.slice(0, 45).trim().replace(/,\s*$/, "") + '...'
         return {
             title: node.frontmatter.post_title, 
             dir: dir,
