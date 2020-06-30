@@ -78,6 +78,7 @@ section p{
     display: flex;
 }
 
+a.postBlock,
 a.postBlock:hover,
 a.postBlock:active,
 a.postBlock:visited{
