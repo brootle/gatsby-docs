@@ -22,3 +22,8 @@ Had to wrap each reference to a static asset in this function call. For example:
 This solved the issue, assets load properly with the correct paths in both development and production mode.
 
 
+https://www.digitalocean.com/community/tutorials/gatsbyjs-mdx-in-gatsby
+
+problem accessing fromtmatter inside mdx https://github.com/gatsbyjs/gatsby/issues/21241
+
+making components globally available for mdx files using MDXProvider https://www.gatsbyjs.org/docs/mdx/importing-and-using-components/ 
