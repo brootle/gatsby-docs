@@ -1,9 +1,9 @@
 import React from 'react'
 
-const SupportSummary = () => (
-  <div>
-      Support Summary
-  </div>
-);
-
-export default SupportSummary
+export default function SupportSummary() {
+    return(
+        <section>
+            Support Summary
+        </section>
+    )
+}

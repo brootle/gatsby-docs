@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FaqSummary = () => (
-  <div>
-      FAQ Summary
-  </div>
-);
-
-export default FaqSummary
+export default function FaqSummary() {
+    return(
+        <section>
+            FAQ Summary
+        </section>
+    )
+}

@@ -3,3 +3,11 @@
     padding-left: calc(60px + var(--sidebar-width));
     box-sizing: border-box;
 }  
+
+h1{
+    margin-top: 0;
+}
+
+section{
+    margin: 60px 0;
+}

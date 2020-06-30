@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TutorialsSummary = () => (
-  <div>
-      Tutorials Summary
-  </div>
-);
-
-export default TutorialsSummary
+export default function TutorialsSummary() {
+    return(
+        <section>
+            Tutorials Summary
+        </section>
+    )
+}
